@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CSV Parser in JavaScript</h1>
+    <script>
+        var s = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,QuizMaster,58\n98,Bill,Doctor's Assistant,26";
+        var cells = [];
+        cell = "";
+        for (i = 0; i < s.length; i++) {
+            if (s[i] == "," || s[i] == "\n") {
+                
+                cells.push(cell);
+                cell = "";
+                
+                continue;
+            }
+            cell += s[i];
+            // console.log(cells);
+            // console.log(cell);
+            
+        }
+        cells.push(cell);
+        // console.log(cells);
+        for (i = 0; i < cells.length / 4; i++) {
+            console.log(
+                cells[4 * i],
+                cells[4 * i + 1],
+                cells[4 * i + 2],
+                cells[4 * i + 3]
+            );
+        }
+    </script>
+</body>
+</html>

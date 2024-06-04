@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Prime Time</h1>
+    <script>
+        var n = 8;
+        for (i = n + 1; ; i++) {
+            isPrime = true;
+            for (j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    isPrime = false;
+                }
+            }
+            if (isPrime == true) {
+                console.log(i);
+                break;
+            }
+        }
+    </script>
+</body>
+</html>
